@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langston's Ant Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="ant-grid">
+            <!-- Ant simulations will be added here dynamically -->
+        </div>
+
+        <button id="add-ant" class="add-button">
+            <span class="plus">+</span>
+        </button>
+    </main>
+
+    <!-- Modal for creating new ant rules -->
+    <div id="ant-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Your Ant</h2>
+            <form id="ant-form">
+                <div class="form-group">
+                    <label for="ant-name">Ant Name:</label>
+                    <input type="text" id="ant-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="creator-name">Your Name:</label>
+                    <input type="text" id="creator-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="grid-size">Grid Size:</label>
+                    <input type="number" id="grid-size" min="20" max="100" value="50" required>
+                </div>
+                <div class="form-group">
+                    <label for="rules">Rules (comma-separated L/R):</label>
+                    <input type="text" id="rules" placeholder="L,R,L,R" required>
+                </div>
+                <div class="form-group">
+                    <label for="colors">Colors (comma-separated hex codes):</label>
+                    <input type="text" id="colors" placeholder="#000000,#FFFFFF" required>
+                </div>
+                <button type="submit">Create Ant</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="ant.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
